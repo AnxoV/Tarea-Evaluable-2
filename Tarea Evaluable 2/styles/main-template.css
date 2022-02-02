@@ -14,17 +14,41 @@ body {
     display: flex;
     flex-direction: column;
 
-    background-color: white;
+    background-color: rgb(255, 252, 239);
 }
 
 /**************************
  ********** Menu **********
  **************************/
 
+@font-face {
+    font-family: 'Aachen-bold';
+    src: url('../fonts/unicode.aachenb.ttf')
+}
+
+header {
+    display: flex;
+    align-items: center;
+
+    padding: 20px;
+    padding-left: 80px;
+
+    background-color: #264653;
+    color: #E9C46A;
+
+    font-family: 'Aachen-bold', sans-serif;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bolder;
+
+    margin: 0;
+}
+
+
 .menu {
     padding: 10px;
-    /*264653*/
-    background-color: #264653;
 }
 
 .menu ul {
@@ -61,7 +85,7 @@ body {
 
 hr.solid {
     width: 90%;
-    border: 1px solid #264653;
+    border: 1px solid #5f92a5;
 }
 
 
@@ -72,15 +96,31 @@ hr.solid {
 main {
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
 
     margin: 0;
-    padding: 20px;
+    padding: 400px;
+    padding-top: 50px;
 }
 
 main article {
     margin: 10px;
-    padding: 20px;
+}
+
+main article h3 {
+    font-size: 40px;
+    font-family: Aachen-bold;
+
+    color: #E76F51;
+
+}
+
+main article p {
+    white-space: pre-wrap;
+
+    font-size: 22px;
+    color: #3b3e41;
+    line-height: 1.6;
 }
 
 
@@ -97,14 +137,12 @@ main article {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    background-color: rgba(122, 122, 122, 0.5);
-    width: 75%;
+    
+    width: 100%;
 }
 
 .card {
-    display: flex;
-
-    width: 32%;
+    width: 45%;
     margin: 5px;
 }
 
@@ -113,6 +151,21 @@ main article {
     height: 100%;
 }
 
-.name, .description {
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.info h3, .info p {
     position: absolute;
+}
+.info h3 {
+    transform: translateX(20%);
+}
+.info p {
+    white-space: normal;
+    left: 50%;
 }
