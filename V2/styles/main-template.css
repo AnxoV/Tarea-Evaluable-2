@@ -1,0 +1,337 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(255, 252, 239);
+}
+
+/**************************
+ ********** Menu **********
+ **************************/
+
+@font-face {
+    font-family: 'Aachen-bold';
+    src: url('../fonts/unicode.aachenb.ttf')
+}
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 20px;
+    padding-left: 80px;
+    margin-bottom: 100px;
+
+    background-color: #264653;
+    color: #E9C46A;
+
+    font-family: 'Aachen-bold', sans-serif;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bolder;
+
+    margin: 0;
+}
+
+.menu {
+    padding: 10px;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0px 10px;
+
+    transition: all 0.3s ease;
+
+    color: #E9C46A;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.menu li a {
+    color: inherit;
+    text-decoration: inherit;
+}
+.menu li:hover {
+    cursor: pointer;
+
+    transform: translateY(-5px);
+    color: #E76F51;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+
+    padding: 12px 8px;
+    min-width: 160px;
+
+    background-color: #335c6d;
+    opacity: 0.95;
+    z-index: 1;
+}
+
+.dropdown-content ul {
+    display: block;
+    padding: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*****************************
+ ********** Divider **********
+ *****************************/
+
+hr.solid {
+    width: 70%;
+    border: 1px solid #5f92a5;
+    margin: 100px;
+}
+
+
+/*****************************
+ ************ Goto ***********
+ *****************************/
+
+#goto-top {
+    position: fixed;
+
+    top: 90%;
+    left: 93%;
+
+    width: 4vw;
+    height: 4vw;
+
+    text-align: center;
+    background-color: #264653;
+    color: #d6a323;
+    font-size: 4vw;
+    border: none;
+    border-radius: 50%;
+}
+
+#goto-top:hover {
+    cursor: pointer;
+}
+
+
+/**************************
+ ********** Main **********
+ **************************/
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    margin: 0;
+}
+
+main article {
+    width: 70%;
+    margin: 10px;
+}
+
+main article h3 {
+    font-size: 40px;
+    font-family: Aachen-bold;
+
+    color: #E76F51;
+
+}
+
+main article p {
+    white-space: pre-wrap;
+
+    font-size: 22px;
+    color: #3b3e41;
+    line-height: 1.6;
+}
+
+
+/*****************************
+ ********** Personajes *******
+ *****************************/
+
+#personajes ul {
+    list-style-type: "▶ ";
+    color: #d6a323;
+}
+
+#personajes ul li h4 {
+    color: #d6a323;
+    font-size: 20px;
+}
+
+#personajes ul li p {
+    color: #3b3e41;
+}
+
+/******************************
+ ********** Plataformas *******
+ ******************************/
+
+#plataformas {
+    display: flex;
+    justify-content: center;
+}
+
+#plataformas table {
+    background-color: #264653;
+    padding: 20px;
+}
+
+#plataformas table tr {
+    padding: 10px;
+}
+
+#plataformas table th {
+    color: #E9C46A;
+    padding: 5px;
+}
+
+#plataformas table td {
+    color: rgb(255, 252, 239);
+}
+
+/******************************
+ ************* Media **********
+ ******************************/
+
+.images-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.images-container img {
+    width: 400px;
+    margin: 5px;
+}
+
+.videos {
+    margin: 100px;
+}
+
+.videos iframe {
+    margin: 20px;
+}
+
+
+/******************************
+ ********* Formulario *********
+ ******************************/
+
+#formulario {
+    font-family: Aachen-bold;
+}
+ 
+#formulario form div {
+    margin: 10px;
+}
+
+#formulario label {
+    color: #E76F51;
+}
+
+#formulario textarea {
+    resize: none;
+
+    border: 2px solid #E76F51;
+    color: #E76F51;
+}
+
+#formulario textarea:focus {
+    outline: none;
+}
+
+#formulario input {
+    border: none;
+    border-bottom: 2px solid #E76F51;
+}
+
+#formulario input:focus {
+    outline: none;
+    border: 2px solid #E76F51;
+    border-style: dashed;
+}
+
+#formulario button {
+    padding: 10px;
+    background-color: #E76F51;
+    border: none;
+    border-radius: 5px;
+
+    font-family: Aachen-bold;
+    font-size: 15px;
+    color: rgb(255, 252, 239);
+}
+
+
+/******************************
+ ************ Footer **********
+ ******************************/
+
+footer {
+    width: 100%;
+    height: 100px;
+
+    margin-top: 100px;
+    padding: 10px;
+
+    background-color: #264653;
+}
+
+footer ul li {
+    display: inline-block;
+
+    margin-right: 10px;
+
+    font-family: Aachen-bold;
+    font-size: 20px;
+    color: #E9C46A;
+
+    transition: all 0.5s ease;
+}
+
+footer ul li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer ul li:hover {
+    cursor: pointer;
+    color: #E76F51;
+    transform: translateY(-5px);
+}
